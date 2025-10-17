@@ -55,3 +55,9 @@ Write a blog post about one of these tools, why did you pick it instead of other
 
 
 SUBMISSION LINK: https://docs.google.com/forms/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/viewform
+
+
+If you finish early, see how far you can get on this!
+
+https://neal.fun/password-game/
+
