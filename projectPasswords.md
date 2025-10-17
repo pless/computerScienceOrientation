@@ -79,3 +79,7 @@ Write a brief conclusion about what you've learned.
 
 
 SUBMISSION LINK: https://docs.google.com/forms/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/viewform
+
+If you finish early, see how far you can get on this!  (ask for help...)
+
+https://neal.fun/password-game/
