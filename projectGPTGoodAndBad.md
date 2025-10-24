@@ -6,7 +6,7 @@ In this lab, the goal is to explore modern generative AI tools and explore ways 
 
 The endpoint of the lab is a blog post that you will write to share what you have learned.  This should be posted to your GWU blog.  When you are done, you are to submit your blog post here:
 
-SUBMISSION LINK: https://forms.gle/WpATq7bge5YboDB7A
+SUBMISSION LINK: https://docs.google.com/forms/u/1/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/formResponse
 
 Details:
 
