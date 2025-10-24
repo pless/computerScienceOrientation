@@ -32,4 +32,4 @@ You could also give text prompts like: “make a haiku about snow” (which prob
 
 Once you have examples– that clearly work and clearly don’t work, explore the “middle ground” where things almost work, and try to figure out what the system is good and not so good at.
 
-I suggest you spend about 20 minutes “just trying stuff”, and then narrow down to a particular topic, and write a blog post like this ((It does not have to look exactly like this, this is just to give a sense of how much I’m looking for):
+I suggest you spend about 20 minutes “just trying stuff”, and then narrow down to a particular topic, and write a blog post.
