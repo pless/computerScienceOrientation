@@ -34,4 +34,5 @@ Pick your favorite tool out of all the tools on the site and describe what it do
 
 When answering these prompts, please make sure to back up your answers with screenshots from the tool! 
 
-SUBMISSION LINK: https://docs.google.com/forms/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/viewform
+SUBMISSION LINK: 
+https://docs.google.com/forms/u/0/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/formResponse
