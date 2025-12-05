@@ -19,7 +19,7 @@ Style 2: Short text completion
 
 This model predicts exactly the next word, and gives the probability that (it believes) each work would be next.
 
-https://huggingface.co/spaces/Bhagu69/next-word-predictor
+https://poloclub.github.io/transformer-explainer/
 
 Your goal is to explore ways that they can give both correct and incorrect answers in surprising ways. The goal is to give you familiarity with these tools and some understanding of the ways that they can make mistakes.
 
