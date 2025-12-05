@@ -1,12 +1,8 @@
-CSCI 1010 -- Lab Exercise for October 18, 2024
-
 Hello!
 
-In this lab, the goal is to explore modern “LLMs” and explore a little deeper how they work, and what some of their failure modes are.
+In this lab, the goal is to explore modern Large Language Models (“LLMs”) and explore a little deeper how they work, and what some of their failure modes are.
 
-We talked in the first lecture about GPT4, and how it is trained to predict the next word, but in reality today’s models (GPT4, Claude, Google Bard/Gemini) put a lot of infrastructure around that, including hidden instructions to both make the model do more of what you ask, be more effective at chatting with you, and aligning its responses acceptable norms.
-
-Today, we are going to explore earlier models that are closer to seeing “what was the next word”.  You can choose one of the following model styles:
+Early GPT models, and the initial training of current models, take all the text they find on the internet, and basically try to "read text for a bit and predict the next word".  In reality today’s models (GPT4, Claude, Google Bard/Gemini) put a lot of infrastructure around that, including hidden instructions to both make the model do more of what you ask, be more effective at chatting with you, and aligning its responses acceptable norms.  But at its core, these models are built to generate the response one word at a time.  So today, we are going to explore earlier models that are closer to seeing “what was the next word”.  You can choose one of the following model styles:
 
 Style 1: Long text completion::
 
@@ -41,7 +37,7 @@ Write your blog post so it is clear what you put as the prompt and what the mode
 
 Option 2: Short text completion
 
-Consider this model: [https://huggingface.co/spaces/Bhagu69/next-word-predictor](https://poloclub.github.io/transformer-explainer/)
+Consider this model: [https://poloclub.github.io/transformer-explainer/](https://poloclub.github.io/transformer-explainer/)
 
 Start the text completion model with a sample prompts, including (but not exactly) those below:
 Short, factual statements (e.g., "The capital of France is...")
