@@ -8,9 +8,6 @@ Early GPT models, and the initial training of current models, take all the text 
 Style 1: Long text completion::
 
 https://textsynth.com/completion.html 
-https://huggingface.co/distilbert/distilgpt2 (type in the box by: “Inference API”)
-[If you feel confident in downloading software to your own computer, you could try ollama or gpt4all and download
-[You can suggest something here!]
 
 Style 2: Short text completion
 
