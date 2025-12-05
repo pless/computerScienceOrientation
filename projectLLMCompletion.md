@@ -1,7 +1,4 @@
----
-layout: default
-title: LLM Completion Project
----
+
 Hello!
 
 In this lab, the goal is to explore modern Large Language Models (“LLMs”) and explore a little deeper how they work, and what some of their failure modes are.
