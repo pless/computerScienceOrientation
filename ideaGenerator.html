@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vibe Coding Idea Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .idea{font-size:clamp(20px,3.2vw,26px);line-height:1.8;margin:4px 0 22px}
+    .blank{color:var(--brand);background:#fde68a;border-radius:6px;padding:2px 6px;cursor:pointer;
+           -webkit-box-decoration-break:clone;box-decoration-break:clone}
+    .blank:hover,.blank:focus-visible{background:#fcd34d;outline:2px solid var(--brand)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+    .actions button{font:inherit;font-weight:600;padding:10px 18px;border:0;border-radius:10px;background:var(--brand);color:#fff;cursor:pointer}
+    .actions button.secondary{background:#e5e7eb;color:var(--ink)}
+    .status{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Vibe Coding Idea Generator</h1>
+      <p>Click a highlighted word to swap just that part.</p>
+    </header>
+
+    <section>
+      <p class="idea" id="idea" aria-live="polite"></p>
+      <div class="actions">
+        <button id="new">New idea</button>
+        <button id="copy" class="secondary">Copy as a prompt</button>
+        <span id="status" class="status"></span>
+      </div>
+      <p class="note">Paste the prompt into your AI tool. Get the simplest version working first, then add one feature at a time.</p>
+    </section>
+  </div>
+
+<script>
+const lists = {
+  style: ["an arcade", "a puzzle", "a clicker", "a typing", "a memory", "an endless runner", "a trivia", "a maze",
+          "a rhythm", "a tower-defense", "a word", "a whack-a-mole", "a choose-your-own-adventure", "a snake-style",
+          "a matching", "a one-button"],
+  hero: ["a sleepy raccoon", "a robot barista", "a rubber duck", "a pigeon with a backpack", "a tiny dragon",
+         "the last slice of pizza", "a nervous first-year student", "a lost Wi-Fi signal", "a squirrel on the National Mall",
+         "a houseplant", "a ghost who is afraid of the dark", "a cat who runs the IT department", "a snowman in July",
+         "a hamster astronaut"],
+  verb: ["collect", "dodge", "sort", "stack", "catch", "match", "feed", "rescue", "recycle", "paint", "launch",
+         "untangle", "hide", "count"],
+  things: ["coffee cups", "falling semicolons", "lost socks", "overdue homework", "emoji", "soap bubbles",
+           "runaway cats", "tiny planets", "tacos", "bugs (the code kind)", "musical notes", "library books",
+           "rubber ducks", "snowflakes"],
+  deadline: ["the 8am alarm goes off", "the battery hits 0%", "the professor turns around", "the floor turns to lava",
+             "the Wi-Fi drops", "the snacks run out", "the timer hits zero", "the sun sets", "the music stops",
+             "the fire drill starts", "the bus leaves"],
+  twist: ["the controls flip every 10 seconds", "gravity reverses", "everything speeds up each time you score",
+          "you only get one button", "the screen slowly gets darker", "the colors change every level",
+          "you can only see the area near your mouse", "the music gets faster as you win",
+          "every mistake makes you bigger", "the high score is saved forever",
+          "a second player can join on the same keyboard", "it gives you a silly compliment every few seconds"],
+  who: ["first-year students", "roommates", "your grandparents", "people who forget to drink water", "procrastinators",
+        "dog owners", "a study group", "night owls", "plant parents", "beginner cooks", "people learning a new language",
+        "a soccer team", "anyone who can't decide"],
+  task: ["pick a lunch spot", "split a pizza bill", "plan a study schedule", "remember birthdays", "choose a movie",
+         "track how much water they drink", "learn 10 new words", "practice typing", "decide who does the dishes",
+         "get to bed on time", "study for a quiz", "plan a weekend trip", "keep a daily mood log", "pick a playlist"],
+  tool: ["a spinning wheel", "rolling dice", "drag-and-drop cards", "a countdown timer", "a color-coded calendar",
+         "flashcards", "a slot machine", "a plant that grows as they make progress", "a quiz", "a leaderboard",
+         "a map", "a big red button", "a virtual pet"],
+  vibe: ["a 1980s arcade", "a cozy coffee shop", "a retro computer terminal", "a nature documentary", "a pirate ship",
+         "a spaceship control panel", "a pastel notebook", "a haunted house", "a video game boss fight",
+         "a Windows 95 desktop", "a candy store", "an underwater kingdom", "a newspaper from 1920"],
+  input: ["your name", "your mouse movements", "a sentence you type", "the current time", "keyboard mashing",
+          "your birthday", "a color you pick", "a number from 1 to 100", "your favorite food",
+          "how long you hold down a key"],
+  output: ["a pixel-art monster", "a little song", "a poem", "a secret code", "a constellation", "a pizza recipe",
+           "a fortune cookie message", "a weather report for an imaginary planet", "abstract art", "a superhero name",
+           "a fake movie poster", "a dance for a stick figure"]
+};
+
+const templates = [
+  "Make {style} game where you play as {hero} who has to {verb} {things} before {deadline}. The twist: {twist}.",
+  "Make a web app that helps {who} {task} using {tool}. Style it like {vibe}.",
+  "Make a toy that turns {input} into {output}. Style it like {vibe}."
+];
+
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const idea = document.getElementById("idea");
+const status = document.getElementById("status");
+let template, choices;
+
+function render() {
+  idea.textContent = "";
+  for (const part of template.split(/(\{\w+\})/)) {
+    const m = part.match(/^\{(\w+)\}$/);
+    if (!m) { idea.append(part); continue; }
+    const key = m[1];
+    // A span (not a button) so long phrases wrap with the sentence
+    const b = document.createElement("span");
+    b.className = "blank";
+    b.textContent = choices[key];
+    b.title = "Click for a different one";
+    b.tabIndex = 0;
+    b.setAttribute("role", "button");
+    const reroll = () => {
+      let w;
+      do { w = pick(lists[key]); } while (w === choices[key]);
+      choices[key] = w;
+      render();
+    };
+    b.onclick = reroll;
+    b.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); reroll(); } };
+    idea.append(b);
+  }
+  status.textContent = "";
+}
+
+function newIdea() {
+  template = pick(templates);
+  choices = {};
+  for (const [, key] of template.matchAll(/\{(\w+)\}/g)) choices[key] = pick(lists[key]);
+  render();
+}
+
+async function copyPrompt() {
+  const text = "Build a single-page web app in one HTML file (HTML, CSS, and JavaScript; no server needed). " +
+    "Idea: " + idea.textContent + " Start with the simplest version that works.";
+  try {
+    await navigator.clipboard.writeText(text);
+    status.textContent = "Copied!";
+  } catch {
+    window.prompt("Copy this prompt:", text);
+  }
+}
+
+document.getElementById("new").onclick = newIdea;
+document.getElementById("copy").onclick = copyPrompt;
+newIdea();
+</script>
+</body>
+</html>
