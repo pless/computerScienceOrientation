@@ -1,6 +1,6 @@
-1. Create a Github account if you do not have one 
-2. Click on the "Create new" button on the top right of the dashboard, and select create a new repository. Name it [Your username].github.io, make sure the visibility is set to public.
-3. Click create a new file, name it HelloWorld.md and in the body type "Hello World"
+1. Create a Github account if you do not have one. If you have one go to github.com 
+2. Click on the plus button on the top right of the dashboard, and select create a new repository. Name it [Your username].github.io, make sure the visibility is set to public. Make sure it is your exact username, include any numbers and the exact spelling.
+3. Click create a new file under quick setup in the bottom left of that box, name it index.md and in the body type "Hello World"
 4. Click commit changes in the upper right hand corner, let it fill in the message, then click commit changes again.
 5. After about a minute or two, at https://[yourusername].github.io you should see "Hello World!"
 6. Come up with a idea for a web app
