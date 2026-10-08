@@ -1,3 +1,13 @@
+1. Create a Github account if you do not have one 
+2. Click on the "Create new" button on the top right of the dashboard, and select create a new repository. Name it [Your username].github.io, make sure the visibility is set to public
+3. Click create a new file, name it HelloWorld.md and in the body type "Hello World"
+4. Click commit changes in the upper right hand corner, let it fill in the message, then click commit changes again.
+5. After about a minute or two, at https://[yourusername].github.io you should see "Hello World!"
+
+
+
+
+
 1. Come up with a idea for a web app
     - The best ideas will be: Specific, simple, not just a reinvention of a app you already use
 2. Describe the app, in detail in a paragraph
