@@ -5,7 +5,7 @@
 5. After about a minute or two, at https://[yourusername].github.io you should see "Hello World!"
 6. Come up with a idea for a web app
     - The best ideas will be: Specific, simple, not just a reinvention of a app you already use.
-    - Here is a terrible way of generating (possible ideas)[https://pless.github.io/computerScienceOrientation/ideaGenerator.html]
+    - Here is a terrible way of generating [possible ideas](https://pless.github.io/computerScienceOrientation/ideaGenerator.html)
 7. Describe the app, in detail in a paragraph
     - Include things like: intended users, problem to solve, what the user needs to do in it, etc.
 8. Edit your description down to around 3-5 features
