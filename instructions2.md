@@ -67,6 +67,51 @@ Using what you learned in this lab and the last one, make a new app that's more 
 
 Your app can only get new data from an API while it's online, so in airplane mode that part won't load. That's expected.
 
+
+## 10 Interesting APIs to Explore
+
+Here are 10 APIs that let you add interesting features and information to your own apps. Each one could be used as the starting point for a fun project.
+
+1. **[PokéAPI](https://pokeapi.co/)** — Pokémon
+
+   Retrieves information about Pokémon, including their types, abilities, stats, and images. You could build a Pokémon encyclopedia, a random Pokémon generator, or a guessing game.
+
+2. **[Open Trivia Database](https://opentdb.com/)** — Trivia and Quizzes
+
+   Provides trivia questions across categories such as science, history, entertainment, and sports. You could build a quiz app that tests users' knowledge and tracks their scores.
+
+3. **[Open-Meteo](https://open-meteo.com/)** — Weather
+
+   Provides weather forecasts, temperatures, wind speeds, and other weather information. You could create a weather app that displays current conditions and forecasts for a selected city.
+
+4. **[Rick and Morty API](https://rickandmortyapi.com/)** — TV Shows
+
+   Provides information about characters, episodes, and locations from *Rick and Morty*. You could create a character explorer or a game where users guess which episode a character appeared in.
+
+5. **[Dog CEO API](https://dog.ceo/dog-api/)** — Dogs
+
+   Provides pictures of dogs from different breeds. You could build a random dog picture generator, a breed explorer, or a guessing game where users identify the breed.
+
+6. **[JokeAPI](https://jokeapi.dev/)** — Jokes
+
+   Provides jokes from categories such as programming, miscellaneous humor, and puns, with options to filter the results. You could create a joke-of-the-day app or a button that generates a new joke whenever someone clicks it.
+
+7. **[Datamuse API](https://www.datamuse.com/api/)** — Words and Language
+
+   Finds words related to a search term based on meaning, rhyme, spelling, and other characteristics. You could build a rhyming assistant, a word game, or a tool that helps people find the perfect word for a poem.
+
+8. **[USGS Earthquake API](https://earthquake.usgs.gov/fdsnws/event/1/)** — Earthquakes
+
+   Provides information about recorded earthquakes, including their locations, magnitudes, and times. You could build an interactive map that displays recent earthquakes around the world.
+
+9. **[International Space Station (ISS) API](https://wheretheiss.at/w/developer)** — Space
+
+   Provides information about the International Space Station's position and movement around Earth. You could create a tracker that shows where the ISS is currently flying and displays its coordinates.
+
+10. **[iTunes Search API](https://performance-partners.apple.com/search-api)** — Music and Media
+
+    Lets you search Apple's media catalog for songs, artists, albums, and previews. You could build a music discovery app that lets users search for artists and explore song previews.
+
 ## Submission ## 
 To submit your lab, use this link: https://forms.gle/h57b2H1Liw23poJDA
 
