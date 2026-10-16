@@ -112,6 +112,58 @@ Here are 10 APIs that let you add interesting features and information to your o
 
     Lets you search Apple's media catalog for songs, artists, albums, and previews. You could build a music discovery app that lets users search for artists and explore song previews.
 
+11. **[National Weather Service API](https://www.weather.gov/documentation/services-web-api)** — US Weather Alerts
+
+    Provides official US forecasts, weather alerts, and radar station data for any location. You could build an app that warns users about storm alerts for their exact neighborhood.
+
+12. **[Sunrise-Sunset API](https://sunrise-sunset.org/api)** — Daylight
+
+    Provides sunrise, sunset, and golden hour times for any location on Earth. You could build an app that tells photographers the best time to take pictures today.
+
+13. **[OpenSky Network API](https://openskynetwork.github.io/opensky-api/)** — Live Airplanes
+
+    Provides the live positions of aircraft flying around the world right now. You could build an app that tells you what plane is flying over your head at this moment.
+
+14. **[CityBikes API](https://api.citybik.es/v2/)** — Bike Sharing
+
+    Provides real-time bike and dock availability for bike-share systems in hundreds of cities. You could build an app that shows the nearest station with bikes available.
+
+15. **[Open Food Facts](https://world.openfoodfacts.org/data)** — Food and Barcodes
+
+    Provides ingredients, nutrition facts, and eco-scores for grocery products looked up by barcode. You could build a scanner app that grades snacks in the store.
+
+16. **[REST Countries](https://restcountries.com/)** — Countries and Flags
+
+    Provides flags, populations, capitals, currencies, and borders for every country. You could build a flag-guessing game or a travel comparison tool.
+
+17. **[The Met Museum API](https://metmuseum.github.io/)** — Art
+
+    Provides images and details for hundreds of thousands of artworks in the Metropolitan Museum of Art. You could build a daily art app or an art guessing game.
+
+18. **[Open Library API](https://openlibrary.org/developers/api)** — Books
+
+    Provides book details, covers, and author information looked up by title or ISBN. You could build a personal reading tracker or a book recommendation app.
+
+19. **[Free Dictionary API](https://dictionaryapi.dev/)** — Definitions
+
+    Provides definitions, pronunciations, and examples for English words. You could build a vocabulary flashcard app or a word-of-the-day widget.
+
+20. **[Deck of Cards API](https://deckofcardsapi.com/)** — Card Games
+
+    Shuffles and deals virtual decks of cards, and remembers the state of each deck for you. You could build blackjack, war, or a magic trick app without storing any data yourself.
+
+21. **[Frankfurter API](https://frankfurter.dev/)** — Currency Exchange
+
+    Provides daily currency exchange rates published by the European Central Bank. You could build a travel budget converter that works for dozens of currencies.
+
+22. **[Jikan API](https://jikan.moe/)** — Anime
+
+    Provides information about anime and manga series, characters, and rankings from MyAnimeList. You could build an anime discovery app or a "guess the character" game.
+
+23. **[Nominatim (OpenStreetMap)](https://nominatim.org/)** — Places and Maps
+
+    Converts place names into map coordinates and back, using OpenStreetMap data. You could build an app that finds the address of wherever the user is standing.
+
 ## Submission ## 
 To submit your lab, use this link: https://forms.gle/h57b2H1Liw23poJDA
 
