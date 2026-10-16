@@ -8,12 +8,12 @@ Your app needs two new files:
 - **manifest.json** tells the phone your app's name, icon, and colors.
 - **sw.js** (a "service worker") saves a copy of your app on the phone so it can run offline.
 
-Together these let your phone understand and show your page like a normal app.
+Together, these let your phone understand and show your page like a normal app.
 
 ## 1. Decide where your app will live, and find its address
 You can either update last week's repository, or keep it as it is and make a new one.
 
-> **To keep your old repository:** create a new repository and upload your files from last week into it. Then click **Settings**, click **Pages** in the menu on the left, and under **Branch** change **None** to **main** and click **Save**.
+> **To keep your old repository:** create a new repository (name it something like lab2) and upload your files from last week into it. Then click the **Settings** button in the top right(ish) corner, and click **Pages** in the menu on the left. Under Build and deployment, look for **Branch** and change the toggle **None** to **main** and click **Save**.
 
 Your site's address is either:
 - `https://USERNAME.github.io/` if your repository is named `USERNAME.github.io`, or
@@ -47,7 +47,7 @@ On your repository's main page, click **Add file → Upload files** (the `+` but
 Click the **Actions** tab. When the newest run shows a green check (usually 1–2 minutes), your site is updated.
 
 ## 6. Install it on your phone
-Open your site's address on your phone, then:
+Open your site's address on your phone (https://your-username.github.io/{app}/), then:
 - **iPhone:** tap Share (a box with an arrow sticking out) → **Add to Home Screen**. If you see "Open as Web App," turn it on.
 - **Android (Chrome):** tap the ⋮ menu → **Install app** or **Add to Home screen**.
 
@@ -63,6 +63,7 @@ Using what you learned in this lab and the last one, make a new app that's more 
 - **CORS: Yes** means the API lets a web page in your browser ask it for data.
 
 > An API (Application Programming Interface) is a fancy name for a connection between computer programs. You call the API from one program in a specific way, and another program returns data in a specific way.
+> For example, if you wanted to write the Pokémon app, there's an API called PokéAPI. It can retrieve information about Pokémon, including their types, abilities, stats, and images. You can use it to build apps like a Pokémon encyclopedia or a random Pokémon generator without having to collect and store all the Pokémon data yourself.
 
 Your app can only get new data from an API while it's online, so in airplane mode that part won't load. That's expected.
 
