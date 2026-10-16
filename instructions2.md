@@ -67,6 +67,9 @@ Using what you learned in this lab and the last one, make a new app that's more 
 
 Your app can only get new data from an API while it's online, so in airplane mode that part won't load. That's expected.
 
+## Submission ## 
+To submit your lab, use this link: https://forms.gle/h57b2H1Liw23poJDA
+
 ## If something goes wrong
 - **Blank page or wrong icon:** check that your file names match the manifest exactly (capital letters count) and that they're in the right folder.
 - **No "Install" or "Add to Home Screen" option:** the manifest or icons aren't loading. Paste your manifest.json into the AI and tell it what happened.
