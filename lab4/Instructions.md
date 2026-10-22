@@ -89,33 +89,16 @@ The goal: the bird goes up and down every time you move the Pi.
 You don't need to understand every single line of Python. You just need to explain what you want, test the result, and ask the AI to fix anything that does not work. The goal is for you to understand 
 (1) How cool a Raspberry Pi is. (2) See how strong generative AI can be (and also see its major weak points) and finally (3) Know how to effectively use and prompt these models
 
-### Optional: View your code on the Raspberry Pi's monitor ###
-The nano text editor looks kinda ugly and can be hard to use. If you would like, you can look at your code through the monitor connected to your Raspberry Pi.
-If you would like to do so use the following steps, but it's not needed to complete the lab
-
-1. Click the Raspberry icon in the top-left corner.
-2. Select Programming → Geany.
-3. In Geany, click File → Open.
-4. Navigate to the projects folder inside the home folder for the csci1010 account.
-5. Select flappy_bird.py and click Open.
-
-You should now see your Python code on the Raspberry Pi's monitor!
-
-**Important**: Use Nano through SSH to edit your code. Use Geany on the monitor to view it. This avoids accidentally overwriting changes made in another editor.
 
 ### Step by step ###
 
 1. On your laptop **Copy the code** again and Open an AI assistant.
 2. Write your prompt. Use Prompt 1 below as a format. Then paste your copied code at the end.
 5. Copy the AI's answer
-6. Paste it into nano using the previous steps on how to do that. 
-7. Run it! If you are using your laptop's terminal, type `python3 flappy_bird.py`; if you are using the monitor:
-   1. Open Geany from the Raspberry menu → Programming → Geany, if it is not already open.
-   2. Click File → Open.
-   3. Navigate to the projects folder in the csci1010 user's home directory.
-   4. Select flappy_bird_accel.py and click Open.
-   5. Hit Build, then run `python3 flappy_bird.py` in the monitor's terminal
-8. **Move the Pi** and see what happens. Move it gently: it is still plugged in, so don't yank the cables, and hold it by the edges instead of pressing on the LED board.
+6. Make a new Python file using the steps above called `flappy_bird_accl.py`
+7. Paste it into nano using the previous steps on how to do that. 
+8. Run it! 
+9. **Move the Pi** and see what happens. Move it gently: it is still plugged in, so don't yank the cables, and hold it by the edges instead of pressing on the LED board.
 
 Is it working as expected?
 Does tilting the Pi move the bird?
@@ -142,4 +125,4 @@ You can finish that sentence with an error message you copied from the Terminal,
 Go to the submission link: {}
 Answer these 2 questions:
 Which version was easier to play, blowing on the Pi or moving the Pi? Why? (1 or 2 sentences)
-Name one everyday device (other than the Pi) that has an accelerometer in it.
+Whats an IP address!
