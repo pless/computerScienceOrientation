@@ -13,6 +13,9 @@
     .note { background: #f5f2e8; border-left: 4px solid #b89b5e; padding: 0.6em 1em; margin: 1.2em 0; }
     code { font-family: Menlo, Consolas, monospace; font-size: 0.92em; background: #f0f0f0; padding: 0 0.25em; }
     a { color: #1a5276; }
+    table { border-collapse: collapse; margin: 1em 0; width: 100%; font-size: 0.95em; }
+    th, td { border: 1px solid #ccc; padding: 0.4em 0.6em; text-align: left; vertical-align: top; }
+    th { background: #f0f0f0; }
   </style>
 </head>
 <body>
@@ -24,7 +27,7 @@ Every computer on the Internet has an address, called an IP address.
 You will use free online tools to look up addresses, to send test messages, and to see
 the path a message takes around the world.</p>
 
-<p>The prompts below are your guide for the exploration.
+<p>The questions below are your guide for the exploration.
 At the end, you will write a very short post on your blogs.gwu.edu blog, like the
 previous labs.</p>
 
@@ -47,10 +50,43 @@ The site has many tools, and you need only a few of them:</p>
       finds the IP address for a website name</li>
 </ul>
 
-<p>Try each of these tools before you start the prompts.
+<p>Try each of these tools before you start the questions.
 Also look at some of the other tools on the site.</p>
 
-<h2>Prompts</h2>
+<h2>The same tools on your own computer</h2>
+
+<p>Every one of these tools is also built into your computer.
+Running them yourself is more fun, and it gives you a second answer to compare with
+the website.
+Open your terminal (Mac: the Terminal app; Windows: Command Prompt), type a command,
+and press Return.
+On a Mac, press Control-C to stop a command that keeps running.</p>
+
+<table>
+  <tr><th>Tool</th><th>Mac</th><th>Windows</th></tr>
+  <tr><td>What Is My IP Address</td>
+      <td><code>curl ifconfig.me</code></td>
+      <td><code>curl ifconfig.me</code></td></tr>
+  <tr><td>Ping</td>
+      <td><code>ping -c 4 google.com</code></td>
+      <td><code>ping google.com</code></td></tr>
+  <tr><td>IP Location Lookup</td>
+      <td><code>curl ip-api.com/line/8.8.8.8</code></td>
+      <td><code>curl ip-api.com/line/8.8.8.8</code></td></tr>
+  <tr><td>Traceroute</td>
+      <td><code>traceroute www.tsinghua.edu.cn</code></td>
+      <td><code>tracert www.tsinghua.edu.cn</code></td></tr>
+  <tr><td>Domain to IP Lookup</td>
+      <td><code>nslookup google.com</code></td>
+      <td><code>nslookup google.com</code></td></tr>
+</table>
+
+<p class="note">Replace <code>google.com</code> or <code>8.8.8.8</code> in the commands with whatever
+address you want to look up.
+On a Chromebook, press Ctrl+Alt+T to open a terminal; it has <code>ping</code> and
+<code>tracepath</code>, but not the others, so use the website for those.</p>
+
+<h2>Questions to work through</h2>
 
 <p class="note">Take a screenshot each time you see something interesting.
 You will use your screenshots in your post at the end.</p>
@@ -126,7 +162,7 @@ The Internet is still in the middle of this change. Find out who has made the ch
 
   <li>Use <a href="https://dnschecker.org/ping-ipv6.php">Ping IPv6</a> to ping
       <code>google.com</code>.
-      Is it faster or slower than the IPv4 ping in prompt 3?</li>
+      Is it faster or slower than the IPv4 ping in question 3?</li>
 </ol>
 
 <h2>Write your post</h2>
