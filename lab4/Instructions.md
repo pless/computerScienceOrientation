@@ -26,7 +26,8 @@ In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will
    1. Click inside the Terminal window.
    2. type `hostname -I` and press Enter
    3. You should see a set of numbers that look something like this: 192.168.1.25. This number is just like a mailing address.
-    It tells your computer where to go to do stuff. The same way your home address tells the mailman where to deliver stuff.
+    It tells your computer where to go to send data. Just like your home address tells the mailman where to deliver mail.
+      > If you see multiple IP addresses, run `ip -4 addr` and look for the one named eth0
 4. Open a terminal on your laptop
    1. If you are using **Windows**:
     Go to your laptop's desktop.
@@ -125,4 +126,7 @@ You can finish that sentence with an error message you copied from the Terminal,
 Go to the submission link: {}
 Answer these 2 questions:
 Which version was easier to play, blowing on the Pi or moving the Pi? Why? (1 or 2 sentences)
-Whats an IP address!
+(q2)
+
+
+
