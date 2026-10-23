@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinging the Internet</title>
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.55; color: #222;
+           max-width: 44em; margin: 0 auto; padding: 1.5em 1em 4em; }
+    h1 { font-size: 1.7em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.2em; margin-top: 1.8em; border-bottom: 1px solid #ccc; padding-bottom: 0.15em; }
+    ol li, ul li { margin-bottom: 0.7em; }
+    .note { background: #f5f2e8; border-left: 4px solid #b89b5e; padding: 0.6em 1em; margin: 1.2em 0; }
+    code { font-family: Menlo, Consolas, monospace; font-size: 0.92em; background: #f0f0f0; padding: 0 0.25em; }
+    a { color: #1a5276; }
+  </style>
+</head>
+<body>
+
+<h1>Pinging the Internet</h1>
+
+<p>In this assignment, you will explore how messages move across the Internet.
+Every computer on the Internet has an address, called an IP address.
+You will use free online tools to look up addresses, to send test messages, and to see
+the path a message takes around the world.</p>
+
+<p>The prompts below are your guide for the exploration.
+At the end, you will write a very short post on your blogs.gwu.edu blog, like the
+previous labs.</p>
+
+<h2>The tool</h2>
+
+<p>Your tool for this assignment is
+<a href="https://dnschecker.org/all-tools.php">dnschecker.org/all-tools.php</a>.
+The site has many tools, and you need only a few of them:</p>
+
+<ul>
+  <li><a href="https://dnschecker.org/whats-my-ip-address.php">What Is My IP Address</a>
+      &mdash; shows the address that your computer uses on the Internet</li>
+  <li><a href="https://dnschecker.org/ping-ipv4.php">Ping</a> &mdash; sends a short message
+      to an address and measures the time, in milliseconds, until the answer comes back</li>
+  <li><a href="https://dnschecker.org/ip-location.php">IP Location Lookup</a> &mdash; shows
+      where in the world an IP address is</li>
+  <li><a href="https://dnschecker.org/online-traceroute.php">Traceroute</a> &mdash; shows
+      each step that a message takes on its way to an address</li>
+  <li><a href="https://dnschecker.org/domain-ip-lookup.php">Domain to IP Lookup</a> &mdash;
+      finds the IP address for a website name</li>
+</ul>
+
+<p>Try each of these tools before you start the prompts.
+Also look at some of the other tools on the site.</p>
+
+<h2>Prompts</h2>
+
+<p class="note">Take a screenshot each time you see something interesting.
+You will use your screenshots in your post at the end.</p>
+
+<ol>
+  <li>What is your computer's IP address?</li>
+
+  <li>Use the Ping tool to find the IP addresses for <code>cs.seas.gwu.edu</code>,
+      <code>emse.seas.gwu.edu</code>, and <code>google.com</code>.
+      Are these addresses the same or different? Why?</li>
+
+  <li>How long does it take the Ping tool to get an answer from <code>google.com</code>?</li>
+
+  <li>Your computer has its own ping program.
+      Open your terminal (Mac: the Terminal app; Windows: Command Prompt; Chromebook: press
+      Ctrl+Alt+T).
+      Type <code>ping google.com</code> and press Return.
+      On Mac and Chromebook, press Control-C after a few lines to stop it.
+      Is your time faster or slower than the time from the website?
+      Why are the two times different?</li>
+
+  <li><code>www.tsinghua.edu.cn</code> is Tsinghua University, in Beijing.
+      How long does it take the Ping tool to get an answer from
+      <code>www.tsinghua.edu.cn</code>? What is its IP address?</li>
+
+  <li>Use the IP Location Lookup tool on your own IP address.
+      Where does it say that you are?</li>
+
+  <li>Where is <code>google.com</code>?
+      Do you think that the answer would be the same if you lived in California?</li>
+
+  <li>Where is <code>www.tsinghua.edu.cn</code>?</li>
+
+  <li>Use the Traceroute tool on <code>www.tsinghua.edu.cn</code>.
+      It shows the IP addresses on the path to Tsinghua, one for each step.
+      Use the IP Location Lookup tool on some of these addresses.
+      Which countries does the message go through?
+      (Bonus: open the <a href="https://www.submarinecablemap.com/">submarine cable map</a>.
+      Which cable do you think the message crossed?)</li>
+
+  <li>What is the longest ping delay that you can find? How did you find it?</li>
+
+  <li>Pick a target: your home, or a famous place like the Statue of Liberty or the
+      pyramids in Cairo.
+      Find an IP address with a location that is close to your target.
+      Hint: think of organizations near the target, like a university, a city government,
+      or a local news site.
+      Use Domain to IP Lookup on their website names.
+      Then use IP Location Lookup on the results.
+      Some answers will surprise you: many websites live in data centers far from their
+      owners.
+      How close to the target can you get?</li>
+
+</ol>
+
+<h2>The newer Internet: IPv6</h2>
+
+<p>The addresses above have four numbers, like <code>101.6.15.66</code>.
+This format is called IPv4. The world ran out of new IPv4 addresses years ago.
+The new format, IPv6, has much longer addresses, like
+<code>2402:f000:1:402:101:6:15:66</code>.
+The Internet is still in the middle of this change. Find out who has made the change:</p>
+
+<ol start="12">
+  <li>Open <a href="https://test-ipv6.com/">test-ipv6.com</a>. The test starts by itself.
+      What score do you get? Does your network support IPv6?</li>
+
+  <li>Use the <a href="https://dnschecker.org/ipv6-compatibility-checker.php">IPv6
+      Compatibility Checker</a>.
+      Does <code>google.com</code> support IPv6? Does <code>www.tsinghua.edu.cn</code>?
+      Now find a famous site that does not support IPv6.
+      (Hint: try <code>gwu.edu</code> and <code>github.com</code>&hellip;)</li>
+
+  <li>Use <a href="https://dnschecker.org/ping-ipv6.php">Ping IPv6</a> to ping
+      <code>google.com</code>.
+      Is it faster or slower than the IPv4 ping in prompt 3?</li>
+</ol>
+
+<h2>Write your post</h2>
+
+<p>Now that you have explored, write a very short post on your blog &mdash; the same blog
+as last week.
+Tell us the one most interesting fact that you found. For example:</p>
+
+<ul>
+  <li>&ldquo;The Yosemite Park webpage is served from a computer in New York City.&rdquo;</li>
+  <li>&ldquo;Ping times from GWU are slow!&rdquo;</li>
+</ul>
+
+<p>Any one fact works.
+Then defend your claim with screenshots from the tools you used.</p>
+
+<h2>Submission</h2>
+
+<p>Use
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/viewform">this
+form</a> to submit your assignment. Sign in with your GWU Google account.</p>
+
+</body>
+</html>

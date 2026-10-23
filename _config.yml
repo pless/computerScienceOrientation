@@ -1,1 +1,5 @@
 theme: minima
+# Keep the theme's top nav empty: minima lists every titled page in the header
+# unless header_pages names specific files; naming a nonexistent file lists none.
+header_pages:
+  - none.md
