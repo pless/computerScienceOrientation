@@ -123,10 +123,11 @@ You can finish that sentence with an error message you copied from the Terminal,
 **Remember:** Vibe coding is an iterative process. You describe what you want, test the code, notice what needs improvement, and ask the AI to make changes. You do not have to get everything right on the first try.
 
 ## Part 5: Submit ##
-Go to the submission link: {}
+Go to the submission link: https://forms.gle/SbN4SrAibbes9CcJ8
 Answer these 2 questions:
-Which version was easier to play, blowing on the Pi or moving the Pi? Why? (1 or 2 sentences)
-(q2)
+- What's an IP?
+- What did you change in the flappy_bird.py file? What did you prompt the AI   (1 or 2 sentences)
+- Look up what a RaspberryPi SenseHat does. What else would you want to do with it? (at least one idea) 
 
 
 
