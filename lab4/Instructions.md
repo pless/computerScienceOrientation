@@ -4,10 +4,10 @@ Computer Science Orientation · Raspberry Pi + Sense HAT
 You'll be using a tiny computer called a **Raspberry Pi**. Attached to the top of it is a **Sense HAT**: a board with a square grid of colored lights (the **LED matrix**) and sensors that can feel temperature, air pressure, humidity, and movement.
 
 By the end of this lab you will have:
-Made the Pi say "Hello world" with its lights, followed by a reading from one of its sensors (temperature, humidity, air pressure)
-Played a Flappy Bird game that you control by blowing on the Pi 
-Used an AI assistant to change the game so you control it by moving the Pi
-Answered 2 short questions
+- Made the Pi say "Hello world" with its lights, followed by a reading from one of its sensors (temperature, humidity, air pressure)
+- Played a Flappy Bird game that you control by blowing on the Pi 
+- Used an AI assistant to change the game so you control it by moving the Pi
+- Answered 2 short questions
 
 
 
@@ -49,10 +49,10 @@ You will make the Pi scroll "Hello world!" across its lights, then show you the 
 2. Next, type: `cd ~/projects` and press Enter
 3. Now type: `nano hello_world.py` and press enter. This is a way for you to type code to make the Raspberry Pi do the thing you want.
 4. Copy the Hello World code that's in the hello_world.py file in this folder.
-5.To paste the code into the text editor:
-  1.  Click inside the Nano editor.
-  2.  Paste the code using Ctrl + Shift + V in most Windows terminals, or right-click and select Paste if that option is available.
-  3.  Check that the code appears in the editor
+5. To paste the code into the text editor:
+   1. Click inside the Nano editor.
+   2. Paste the code using Ctrl + Shift + V in most Windows terminals, or right-click and select Paste if that option is available.
+   3. Check that the code appears in the editor
 Important: Do not press Ctrl + V automatically. In Nano, that shortcut may trigger a different command depending on your terminal.
 6. You need to save the code before you can run it. To do that:
    1. Press Ctrl + O (the letter O, not zero).
