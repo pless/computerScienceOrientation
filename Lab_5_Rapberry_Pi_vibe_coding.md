@@ -65,7 +65,7 @@ Before asking AI to write code, think about these questions.
 4. What would make your project more interesting?
 >Think of one extra feature you might want to add later. It's ok if you don't have time for it.
 
-**NOTE** Do NOT ask AI to come up with the project idea itself. We want to teach you how to vibe code and use AI properly, not to skip using your brain. 
+**NOTE** This should most likely be the longest part of the lab. Do NOT ask AI to come up with the project idea itself. We want to teach you how to vibe code and use AI properly, not to skip utilizing your own mind. 
 
 ## Step 3: Prompting AI ## 
 There are a few ways to prompt an AI agent and one of the ways is by persona prompting. You do this by assigning the AI a character, job title, or area of expertise before giving it a task. 
@@ -78,7 +78,28 @@ How do you think you can use this kind of prompting to help you more effectively
 ## Step 4: Running ##
 The next step is to copy and run the code!
 Last week, we made the folder `projects` with files `Hello_world.py`, `Flappy_bird.py` and `flappy_bird_accl.py` (or something similar)
-1. Check your current director (where you are in the terminal)
+1. Check your current directory (where you are in the terminal) with the `pwd` command, which stands for print working directory. You should see csci1010@LAB{dir} ###### Change
+2. If you see {directory} great! If not, run this command to put youin the right place [dir]
+3. Create a new file called lab 5 and paste your code; you do that by running `nano lab5.py`  and pressing Enter
+     1. Click inside the Nano editor.
+     2. Paste the code using Ctrl + Shift + V in most Windows terminals, or right-click and select Paste if that option is available.
+     3. Check that the code appears in the editor. Important: Do not press Ctrl + V automatically. In Nano, that shortcut may trigger a different command depending on your terminal.
+4. You need to save the code before you can run it. To do that:
+     1. Press Ctrl + O (the letter O, not zero).
+     2. Nano will show the filename at the bottom. It should say lab5.py.
+     3. Press Enter to confirm the filename.
+     4. Press Ctrl + X to exit Nano.
+     5. Now the fun part. Type python3 lab5.py into the terminal to run your code.
+  
+Does it work how you expected? Are there any errors? If there are, feed them into the AI model of your choice, explain what you are trying to do, what is currently happening, and any errors you encountered. 
+
+## Step 5: Submitting ##
+
+Answer the following questions on the submission form for credit. 
+Use this link: {LINK} and answer the following questions: 
+1. What was the project you made? What sensor did you utilize?
+2. Did you use persona prompting? Did you notice any difference between persona prompting and non-persona prompting?
+3. Can we share your projects with some of the faculty in the department (Does not affect grade, we just want to show off to other professors)
 
 
 
