@@ -16,19 +16,8 @@ By the end of this lab you will have:
 What is SSH? SSH stands for Secure Shell. It lets you control another computer by typing commands from your own computer.
 In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will find the Pi's IP address. Then, you will use that address to connect to it remotely.
 
-1. Look at the monitor connected to your Raspberry Pi. You should see the Raspberry Pi desktop, which looks similar to a regular computer desktop.
-2. You need to open a program called the **Terminal**.
-   1. Look at the top-left corner of the Raspberry Pi desktop.
-   2. Click the Raspberry icon to open the main menu.
-   3. Find and click Accessories.
-   4. Click Terminal. 
-3. Find the Raspberry Pi's IP address
-   1. Click inside the Terminal window.
-   2. type `hostname -I` and press Enter
-   3. You should see a set of numbers that look something like this: 192.168.1.25. This number is just like a mailing address.
-    It tells your computer where to go to send data. Just like your home address tells the mailman where to deliver mail.
-      > If you see multiple IP addresses, run `ip -4 addr` and look for the one named eth0
-4. Open a terminal on your laptop
+1. In your Raspberry Pi box, there is a note card with that Raspberry Pi's IP address (do youremeber what that is from two weeks ago? It's how other devices know where to go to deliver data)
+2. Open a terminal on your laptop
    1. If you are using **Windows**:
     Go to your laptop's desktop.
     Press the Windows key on your keyboard.
@@ -36,18 +25,18 @@ In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will
     Click Windows PowerShell in the search results.
     If you are using **macOS** or **Linux**: Open the Terminal application on your laptop.
     A new window should open where you can type commands.
-    *If youre not sure what you have, ask us and we can tell you*
-    2. In the terminal on your laptop, type the following command: `ssh csci1010@IP_ADDRESS` and replace the IP_ADDRESS with the IP address you found on step 3.
+    *Ifyou'ree not sure what you have, ask us and we can tell you*
+    2. In the terminal on your laptop, type the following command: `ssh csci1010@IP_ADDRESS` and replace the IP_ADDRESS with the IP address on your note card.
     3. The first time you connect, your laptop may ask whether you trust the Raspberry Pi. Type `yes` and press Enter.
     4. You will see a prompt to enter a password. The password is password (I know it's very secure). ** IMPORTANT: ** The password may not appear on the screen as you type. You will not see letters, dots, or stars. This is normal. Type the password anyway and press Enter. 
-5. Check you're connected by typing `hostname` in your laptop's terminal. It should say "Lab"
+3. Check you're connected by typing `hostname` in your laptop's terminal. It should say "Lab"
 Congratulations! You have connected to a Raspberry Pi remotely using SSH. You will use this same terminal for the rest of the lab.
    
 ## Part 2: Say "Hello world" on the LED board ##
 You will make the Pi scroll "Hello world!" across its lights, then show you the temperature, pressure, and humidity of the room.
 1. Type the following command: `mkdir -p ~/projects` and press Enter
 2. Next, type: `cd ~/projects` and press Enter
-3. Now type: `nano hello_world.py` and press enter. This is a way for you to type code to make the Raspberry Pi do the thing you want.
+3. Now type: `nano hello_world.py` and pressEnterr. This is a way for you to type code to make the Raspberry Pi do the thing you want.
 4. Copy the Hello World code that's in the hello_world.py file in this folder.
 5. To paste the code into the text editor:
    1. Click inside the Nano editor.
