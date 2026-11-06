@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Emergent Behavior: The Game of Life and Boids</title>
+  <style>
+    body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.55; color: #222;
+           max-width: 44em; margin: 0 auto; padding: 1.5em 1em 4em; }
+    h1 { font-size: 1.7em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.2em; margin-top: 1.8em; border-bottom: 1px solid #ccc; padding-bottom: 0.15em; }
+    h3 { font-size: 1.05em; margin-top: 1.4em; }
+    ol li, ul li { margin-bottom: 0.7em; }
+    .note { background: #f5f2e8; border-left: 4px solid #b89b5e; padding: 0.6em 1em; margin: 1.2em 0; }
+    code { font-family: Menlo, Consolas, monospace; font-size: 0.92em; background: #f0f0f0; padding: 0 0.25em; }
+    a { color: #1a5276; }
+    table { border-collapse: collapse; margin: 1em 0; width: 100%; font-size: 0.95em; }
+    th, td { border: 1px solid #ccc; padding: 0.4em 0.6em; text-align: left; vertical-align: top; }
+    th { background: #f0f0f0; }
+    .answer { color: #555; font-style: italic; }
+    .figures { display: flex; flex-wrap: wrap; gap: 2em; margin: 1em 0; }
+    figure { margin: 0; }
+    figcaption { font-size: 0.9em; color: #555; margin-top: 0.4em; max-width: 14em; }
+    .board { display: inline-grid; gap: 2px; }
+    .board span { width: 1.6em; height: 1.6em; border: 1px solid #bbb; background: #fff; }
+    .board .on { background: #1a5276; box-shadow: inset 0 0 0 2px #fff; }
+    .board .nb { background: #d6e4f0; }
+  </style>
+</head>
+<body>
+
+<h1>Emergent Behavior: The Game of Life and Boids</h1>
+
+<p>Some computer games have very simple rules, but they make complex patterns that are hard
+to predict.
+This is called <em>emergent behavior</em>.
+People started to study games like this more than 50 years ago.</p>
+
+<p>Today you will explore two famous examples: Conway's Game of Life and Craig Reynolds' Boids.
+Both are easy to program.
+At the end, you will write a post on your blogs.gwu.edu blog about one of them.</p>
+
+<h2>What you do today</h2>
+
+<ol>
+  <li>Part 1 (must do): Explore the Game of Life.</li>
+  <li>Part 2 (must do): Explore Boids.</li>
+  <li>Write one blog post. Choose option 1 or option 2.</li>
+  <li>Submit your post with the form.</li>
+</ol>
+
+<p class="note">Take a screenshot each time you see something interesting.
+You will use your screenshots in your blog post.</p>
+
+<h2>Part 1: The Game of Life (must do)</h2>
+
+<p>The Game of Life is a <em>discrete</em> game.
+The world is a grid of cells, and time moves in steps.
+Each cell is &ldquo;on&rdquo; (alive) or &ldquo;off&rdquo; (dead).
+Each cell has 8 neighbors: the cells next to it, also on the diagonals.</p>
+
+<p>At each step, every cell counts its &ldquo;on&rdquo; neighbors.
+Then all the cells change at the same time, with these rules:</p>
+
+<table>
+  <tr><th>The cell is now</th><th>&ldquo;On&rdquo; neighbors</th><th>At the next step, the cell is</th></tr>
+  <tr><td>on</td><td>2 or 3</td><td>on (it stays alive)</td></tr>
+  <tr><td>on</td><td>0 or 1</td><td>off (too lonely)</td></tr>
+  <tr><td>on</td><td>4 or more</td><td>off (too crowded)</td></tr>
+  <tr><td>off</td><td>exactly 3</td><td>on (a new cell is born)</td></tr>
+  <tr><td>off</td><td>any other number</td><td>off</td></tr>
+</table>
+
+<p>That is all!
+These rules make patterns that move, grow, or disappear.</p>
+
+<h3>Think first</h3>
+
+<p>Answer these questions in your head before you use the simulator.</p>
+
+<ol>
+  <li>All the cells are off. What happens at the next step?<br>
+      <span class="answer">Answer: All the cells stay off.
+      No cell has 3 &ldquo;on&rdquo; neighbors, so no new cell is born.</span></li>
+  <li>All the cells are on. What happens at the next step?<br>
+      <span class="answer">Answer: Each cell in the middle of the board has 8 &ldquo;on&rdquo;
+      neighbors. That is more than 3, so these cells turn off.</span></li>
+  <li>Only one cell is on. What happens?</li>
+  <li>Three cells in a row are on. What happens to each of the three cells?
+      What happens to their neighbors?</li>
+</ol>
+
+<div class="figures">
+  <figure>
+    <div class="board" style="grid-template-columns: repeat(3, 1.6em)">
+      <span class="nb"></span><span class="nb"></span><span class="nb"></span>
+      <span class="nb"></span><span class="on"></span><span class="nb"></span>
+      <span class="nb"></span><span class="nb"></span><span class="nb"></span>
+    </div>
+    <figcaption>A cell (dark) and its 8 neighbors (light).</figcaption>
+  </figure>
+  <figure>
+    <div class="board" style="grid-template-columns: repeat(5, 1.6em)">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <figcaption>Question 4: three cells in a row. What is the next step?</figcaption>
+  </figure>
+</div>
+
+<h3>Try it</h3>
+
+<p>Open the simulator:
+<a href="https://kylepaulsen.com/stuff/game_of_life.html">kylepaulsen.com/stuff/game_of_life.html</a>.</p>
+
+<ol>
+  <li>Click <strong>Randomize Board</strong> to fill the grid with random cells.</li>
+  <li>Click <strong>Simulate</strong> to start.
+      To move one step at a time, click <strong>Next Gen</strong>.</li>
+  <li>To draw your own cells, click and drag in the box.</li>
+</ol>
+
+<p>Spend 5 minutes on this. Look for these patterns:</p>
+
+<ul>
+  <li>Patterns that never change. These are <em>stable</em>.</li>
+  <li>Patterns that change, but repeat the same shapes again and again or move across the
+      board. These are <em>dynamically stable</em>.</li>
+</ul>
+
+<h2>Part 2: Boids (must do)</h2>
+
+<p>Boids is a <em>continuous</em> game.
+There is no grid.
+Each boid moves smoothly, and its position can be any point on the screen.
+&ldquo;Boid&rdquo; is short for &ldquo;bird-oid object&rdquo;: a simple model of a bird.</p>
+
+<p>Each boid obeys three rules.
+A slider controls each rule.</p>
+
+<table>
+  <tr><th>Rule</th><th>What each boid does</th><th>What the slider controls</th></tr>
+  <tr><td>Coherence (also called cohesion)</td>
+      <td>Flies toward the other boids near it.</td>
+      <td>How quickly it turns toward them.</td></tr>
+  <tr><td>Separation</td>
+      <td>Steers away so that it does not hit other boids.</td>
+      <td>How close it gets to another boid before it turns away.</td></tr>
+  <tr><td>Alignment</td>
+      <td>Tries to match the speed and direction of the boids near it.</td>
+      <td>How closely it matches them.</td></tr>
+</table>
+
+<h3>Try it</h3>
+
+<p>Open one of these simulators:</p>
+
+<ul>
+  <li><a href="https://eater.net/boids">eater.net/boids</a></li>
+  <li><a href="https://boids.cubedhuang.com/">boids.cubedhuang.com</a></li>
+</ul>
+
+<p>Move the sliders and watch the boids.
+What happens when a slider is at its smallest value?
+What happens at its largest value?</p>
+
+<h2>Write your blog post</h2>
+
+<p>Choose <strong>one</strong> of the two options below.
+Write the post on your blogs.gwu.edu blog, the same blog as in the previous labs.</p>
+
+<p class="note">Include screenshots to support your conclusions.</p>
+
+<h3>Option 1: Change the rules of the Game of Life</h3>
+
+<p>Use the <a href="https://kylepaulsen.com/stuff/game_of_life.html">Game of Life
+simulator</a>.
+Below the grid, find two rows of checkboxes: <strong>To be born</strong> and
+<strong>To stay alive</strong>.
+Each checkbox is a number of &ldquo;on&rdquo; neighbors.
+The normal rules are: born with 3, and stay alive with 2 or 3.
+Click the checkboxes to make new rules.</p>
+
+<ul>
+  <li>Which rule sets are boring? Why?</li>
+  <li>Which rule sets also make interesting behavior?
+      Are there different kinds of &ldquo;interesting&rdquo;?</li>
+  <li>Why is the normal rule set the most interesting one?</li>
+  <li>What different kinds of rules could you add to this game?</li>
+</ul>
+
+<h3>Option 2: Change the sliders for Boids</h3>
+
+<p>Use one of the two Boids simulators.
+Write about what happens when you change the sliders.</p>
+
+<ul>
+  <li>Which slider settings make very boring behavior?</li>
+  <li>Which settings make interesting behavior?
+      Are there different kinds of &ldquo;interesting&rdquo;?</li>
+  <li>Can you find slider settings that make more than one flock at the same time?</li>
+  <li>What other rules could you add to this simulation?</li>
+</ul>
+
+<h2>Submission</h2>
+
+<p>Use <a href="https://forms.gle/h57b2H1Liw23poJDA">this form</a> to submit your blog post.</p>
+
+</body>
+</html>
