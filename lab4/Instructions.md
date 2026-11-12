@@ -11,12 +11,20 @@ By the end of this lab you will have:
 
 
 
-## Part 1: Connect to the Raspberry Pi using SSH
+## Part 1: Setting up and connect to the Raspberry Pi
 
 What is SSH? SSH stands for Secure Shell. It lets you control another computer by typing commands from your own computer.
 In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will find the Pi's IP address. Then, you will use that address to connect to it remotely.
 
-1. Log into the school Laptop using your login info (It should be the beginning part of your email and your password)
+### Setting up
+In front of you, there should be a school-issued laptop, an Ethernet cable, and a box labeled Canakit. We need to plug things in and set up so we can ssh into the Pi
+
+1. Open the Canakit box; inside, there should be a box labeled USB-C (this is the power supply to the pi), Raspberry Pi, and a case for the pi. Grab the power cable and the Raspberry Pi box.
+2. Inside the Raspberry Pi box, there should be two pieces
+3. Log in to the school wWiFi (sometimes the school laptops can be weird and won't let you login before its connected to internet) then log into the school Laptop using your login info (It should be the beginning part of your email and your password)
+4. 
+
+1. 
 2. Open the course webpage on that laptop (you can go to any browser and type: https://github.com/pless/computerScienceOrientation/tree/main/lab4). That way you have all the files you need on the laptop you will be using for the rest of class.
 3. In your Raspberry Pi box, there is a note card with that Raspberry Pi's IP address (do you remember what that is from two weeks ago? It's how other devices know where to go to deliver data)
 4. Open a terminal on the laptop
