@@ -7,11 +7,11 @@ By the end of this lab you will have:
 - Made the Pi say "Hello world" with its lights, followed by a reading from one of its sensors (temperature, humidity, air pressure)
 - Played a Flappy Bird game that you control by blowing on the Pi 
 - Used an AI assistant to change the game so you control it by moving the Pi
-- Answered 2 short questions
+- Answered 3 short questions
 
 
 
-## Part 1: Setting up and connect to the Raspberry Pi
+## Part 1: Setting up and connecting to the Raspberry Pi
 
 What is SSH? SSH stands for Secure Shell. It lets you control another computer by typing commands from your own computer.
 In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will find the Pi's IP address. Then, you will use that address to connect to it remotely.
@@ -19,24 +19,27 @@ In this lab, you will use a laptop to connect to a Raspberry Pi. First, you will
 ### Setting up
 In front of you, there should be a school-issued laptop, an Ethernet cable, and a box labeled Canakit. We need to plug things in and set up so we can ssh into the Pi
 
+#### Setting up the laptop
 1. Open the Canakit box; inside, there should be a box labeled USB-C (this is the power supply to the pi), Raspberry Pi, and a case for the pi. Grab the power cable and the Raspberry Pi box.
-2. Inside the Raspberry Pi box, there should be two pieces
-3. Log in to the school wWiFi (sometimes the school laptops can be weird and won't let you login before its connected to internet) then log into the school Laptop using your login info (It should be the beginning part of your email and your password)
-4. 
+2. Log in to the school WiFi (sometimes the school laptops can be weird and won't let you log in before it's connected to the internet), then log into the school Laptop using your login info (It should be the beginning part of your email and your password)
+3. Inside the Raspberry Pi box, there should be two pieces: the Raspberry Pi and the Sense HAT. Pi is the one that has the usb inputs and has a number on it. The Sense HAT is the other piece of hardware that has the LED board (the 8x8 white box). The Sense HAT has way more cool things on it, but we'll talk about that later.
+4. First, put the Sense HAT on the Pi. There are 40 prongs sticking out of the Pi. Line them up so that the Sense HAT is over the Raspberry Pi.
+5. Then plug in the Ethernet cable into both the laptop and the Raspberry Pi.
+6. Then grab the box that has the power cable in it, plug it into the outlet, then plug in the Pi.
+7. Wait a few minutes (2-3) for the Pi to boot up, and then the hardware setup is done
 
-1. 
-2. Open the course webpage on that laptop (you can go to any browser and type: https://github.com/pless/computerScienceOrientation/tree/main/lab4). That way you have all the files you need on the laptop you will be using for the rest of class.
+
+1. Next, navigate to Chrome, Edge, or any browser on the laptop
+2. Open the course webpage (you can go to any browser and type: https://github.com/pless/computerScienceOrientation/tree/main/lab4). That way you have all the files you need on the laptop you will be using for the rest of class.
 3. In your Raspberry Pi box, there is a note card with that Raspberry Pi's IP address (do you remember what that is from two weeks ago? It's how other devices know where to go to deliver data)
 4. Open a terminal on the laptop
-   1. If you are using **Windows**:
-    Go to your laptop's desktop.
     Press the Windows key on your keyboard.
     Type PowerShell into the search bar.
     Click Windows PowerShell in the search results.
-    2. In the terminal on your laptop, type the following command: `ssh csci1010@IP_ADDRESS` and replace the IP_ADDRESS with the IP address on your note card.
-    3. The first time you connect, your laptop may ask whether you trust the Raspberry Pi. Type `yes` and press Enter.
-    4. You will see a prompt to enter a password. The password is password (I know it's very secure). ** IMPORTANT: ** The password may not appear on the screen as you type. You will not see letters, dots, or stars. This is normal. Type the password anyway and press Enter. 
-5. Check you're connected by typing `hostname` in your laptop's terminal. It should say "Lab"
+5. In the terminal, type the following command: `ssh csci1010@LAB[number on the pi]` and replace [number on the pi] with the number you see on your Pi. It's located on top of where you plugged the Ethernet cable. 
+6. The first time you connect, your laptop may ask whether you trust the Raspberry Pi. Type `yes` and press Enter.
+7. You will see a prompt to enter a password. The password is password (I know it's very secure). ** IMPORTANT: ** The password may not appear on the screen as you type. You will not see letters, dots, or stars. This is normal. Type the password anyway and press Enter. 
+8. Check you're connected by typing `hostname` in your laptop's terminal. It should say "Lab"
 Congratulations! You have connected to a Raspberry Pi remotely using SSH. You will use this same terminal for the rest of the lab.
    
 ## Part 2: Say "Hello world" on the LED board ##
