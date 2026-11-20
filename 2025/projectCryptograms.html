@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cryptograms Project</title>
+  <style>
+    :root { --ink: #222; --muted: #666; --accent: #1a5276; --paper: #fbfaf6;
+            --tile: #fff; --line: #d8d3c4; --note: #f5f2e8; --note-edge: #b89b5e; }
+    * { box-sizing: border-box; }
+    body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: var(--ink);
+           background: var(--paper); margin: 0; }
+    .wrap { max-width: 44em; margin: 0 auto; padding: 1.5em 1em 4em; }
+
+    header { text-align: center; margin: 1em 0 2em; }
+    .tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3em; margin-bottom: 0.8em; }
+    .tile { width: 2.2em; text-align: center; font-family: Menlo, Consolas, monospace; }
+    .tile b { display: block; background: var(--tile); border: 1px solid var(--line); border-radius: 4px;
+              font-size: 1.15em; padding: 0.15em 0; color: var(--accent); }
+    .tile span { display: block; font-size: 0.75em; color: var(--muted); border-top: 2px solid var(--ink);
+                 margin-top: 0.2em; }
+    h1 { font-size: 1.9em; margin: 0; }
+    .sub { color: var(--muted); margin: 0.2em 0 0; }
+
+    h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid var(--line); padding-bottom: 0.15em; }
+    .strategy { background: var(--tile); border: 1px solid var(--line); border-radius: 8px;
+                padding: 0.4em 1.2em; margin: 1em 0; }
+    .strategy h3 { font-size: 1em; margin: 0.6em 0 0; color: var(--accent); }
+    .strategy p { margin: 0.4em 0 0.8em; }
+
+    .task { background: var(--note); border-left: 4px solid var(--note-edge); padding: 0.8em 1.2em;
+            margin: 1.2em 0; border-radius: 0 8px 8px 0; }
+    .task p { margin: 0.5em 0; }
+
+    a { color: var(--accent); }
+    .button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+              padding: 0.5em 1.1em; border-radius: 6px; margin: 0.3em 0; font-family: system-ui, sans-serif;
+              font-size: 0.95em; }
+    .button:hover { background: #154360; }
+    .url { display: block; font-size: 0.85em; color: var(--muted); word-break: break-all; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="tiles" aria-hidden="true">
+    <div class="tile"><b>X</b><span>C</span></div>
+    <div class="tile"><b>P</b><span>R</span></div>
+    <div class="tile"><b>M</b><span>Y</span></div>
+    <div class="tile"><b>E</b><span>P</span></div>
+    <div class="tile"><b>Z</b><span>T</span></div>
+    <div class="tile"><b>Q</b><span>O</span></div>
+  </div>
+  <h1>Cryptograms Project</h1>
+  <p class="sub">Solve replacement ciphers by hand</p>
+</header>
+
+<h2>What is a cryptogram?</h2>
+
+<p>Replacement cipher cryptograms are a fundamental type of cryptographic puzzle where each letter in the original message is systematically substituted with a different letter. This form of encryption maintains the structure and spacing of the original text, making it accessible for manual decryption without the need for specialized tools.</p>
+
+<h2>Strategies</h2>
+
+<div class="strategy">
+  <h3>1. Letter frequency</h3>
+  <p>When approaching a replacement cipher cryptogram, one effective strategy is to analyze the frequency of each letter in the encrypted message. In the English language, certain letters such as 'E', 'T', 'A', and 'O' appear more frequently. By identifying the most common letters in the cryptogram, you can make educated guesses about potential substitutions. For instance, if a particular symbol or letter appears repeatedly, it is likely to correspond to one of these high-frequency letters, providing a starting point for further decryption efforts.</p>
+</div>
+
+<div class="strategy">
+  <h3>2. Short words</h3>
+  <p>Another useful technique involves identifying single-letter words within the cryptogram. In English, the only single-letter words are 'A' and 'I'. Recognizing these can help narrow down possible substitutions and provide anchors for decoding surrounding letters. Additionally, observing common short words, such as 'THE', 'AND', or 'TO', can offer valuable clues. By matching patterns and considering the context in which certain letters appear, students can progressively unlock more of the encrypted message.</p>
+</div>
+
+<div class="strategy">
+  <h3>3. Letter pairs and word endings</h3>
+  <p>Lastly, paying attention to letter pairings and common suffixes or prefixes can aid in solving replacement ciphers. For example, the presence of double letters like 'LL' or 'SS' can indicate specific letter combinations, while common endings such as '-ING' or '-TION' can suggest possible substitutions. By systematically applying these strategies and maintaining a methodical approach, you can effectively decipher replacement cipher cryptograms by hand, enhancing your analytical and problem-solving skills in the process.</p>
+</div>
+
+<h2>Your assignment</h2>
+
+<div class="task">
+  <p>Your assignment today is to go to the following site:</p>
+  <p><a class="button" href="https://cryptograms.puzzlebaron.com/play.php">Open the cryptogram site</a>
+     <span class="url">https://cryptograms.puzzlebaron.com/play.php</span></p>
+  <p>and solve <em>at least two</em> cryptograms (you can refresh the webpage to get a new puzzle).</p>
+  <p>Write a blog post that includes the original cryptogram, your solution, and what strategies you used to figure it out.</p>
+  <p>You are allowed to help others (and get help), but everyone needs to turn in solutions to their own puzzles.</p>
+</div>
+
+<h2>Submission</h2>
+
+<p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd8q5D9Uea8qpjWMAoZGq5x8MTMN0b6H9oJ4ctEfEJNZQ4Pdw/viewform">Submission link</a></p>
+
+</div>
+</body>
+</html>
